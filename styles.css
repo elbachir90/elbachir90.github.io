@@ -238,6 +238,86 @@ section {
     background-color: var(--primary-color);
 }
 
+/* === Subject Sections === */
+.subject-section {
+    margin-bottom: 4rem;
+}
+
+.subject-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--secondary-color);
+}
+
+.subject-header h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.subject-icon {
+    font-size: 2rem;
+}
+
+/* Color variations for different subjects */
+.subject-reseaux .subject-header { border-left-color: #3498db; }
+.subject-reseaux .course-header { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); }
+
+.subject-accompagnement .subject-header { border-left-color: #9b59b6; }
+.subject-accompagnement .course-header { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
+
+.subject-maths .subject-header { border-left-color: #e67e22; }
+.subject-maths .course-header { background: linear-gradient(135deg, #e67e22 0%, #d35400 100%); }
+
+.subject-physique .subject-header { border-left-color: #16a085; }
+.subject-physique .course-header { background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%); }
+
+.subject-programmation .subject-header { border-left-color: #e74c3c; }
+.subject-programmation .course-header { background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); }
+
+/* Date badge */
+.date-badge {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.course-type {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.type-cours {
+    background-color: #3498db;
+    color: white;
+}
+
+.type-tp {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.type-td {
+    background-color: #f39c12;
+    color: white;
+}
+
 /* === Info Section === */
 .info-section {
     background-color: var(--white);
@@ -259,6 +339,28 @@ section {
 
 .info-section li {
     margin-bottom: 0.5rem;
+}
+
+/* === Quick Add Template (hidden by default) === */
+.template-guide {
+    background-color: #fffbea;
+    border: 2px dashed #f39c12;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+.template-guide h4 {
+    color: #d68910;
+    margin-bottom: 1rem;
+}
+
+.template-guide code {
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
 }
 
 /* === Footer === */
@@ -299,6 +401,19 @@ footer {
 }
 
 /* === Responsive Design === */
+@media (max-width: 1024px) {
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -308,12 +423,18 @@ footer {
 
     .logo-section h1 {
         font-size: 1.2rem;
+        text-align: center;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 0.5rem;
         text-align: center;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
     }
 
     .hero h2 {
@@ -332,9 +453,23 @@ footer {
         font-size: 1.5rem;
     }
 
-    .footer-links {
+    .subject-header {
         flex-direction: column;
-        gap: 1rem;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .subject-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
     }
 }
 
@@ -349,5 +484,14 @@ footer {
 
     .logo-section img {
         height: 50px;
+    }
+
+    .logo-section h1 {
+        font-size: 1rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
     }
 }
