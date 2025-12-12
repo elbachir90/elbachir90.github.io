@@ -6,11 +6,14 @@
     <meta name="description" content="Plateforme de cours pour BTS CIEL - Jean-Baptiste de La Salle">
     <title>BTS CIEL - Plateforme de Cours</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
-    <!-- Bouton de basculement mode sombre/clair -->
-    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Basculer le thème">🌙</button>
+    <!-- Conteneur pour les particules de fond -->
+    <div id="particles-background"></div>
+
     <!-- Header avec navigation -->
     <header>
         <div class="header-container">
@@ -28,6 +31,10 @@
                     <li><a href="#programmation">Programmation</a></li>
                 </ul>
             </nav>
+            <!-- Bouton mode sombre/clair dans le header -->
+            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Basculer le thème" title="Changer le thème">
+                🌙
+            </button>
         </div>
     </header>
 

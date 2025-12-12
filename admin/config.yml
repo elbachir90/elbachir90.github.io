@@ -1,0 +1,81 @@
+backend:
+  name: git-gateway
+  branch: main # Branche par défaut
+
+# Configuration locale pour développement (optionnel)
+# local_backend: true
+
+# Configuration des médias
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Configuration de la langue
+locale: 'fr'
+
+# Collections - Organisation des contenus
+collections:
+  - name: "cours" # Identifiant unique
+    label: "Cours et TP" # Nom affiché dans l'interface
+    folder: "_cours" # Dossier où seront stockés les cours
+    create: true # Permet de créer de nouveaux cours
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Format du nom de fichier
+    fields: # Champs du formulaire
+
+      - label: "Matière"
+        name: "matiere"
+        widget: "select"
+        options:
+          - { label: "🌐 Réseaux", value: "reseaux" }
+          - { label: "👥 Accompagnement Personnalisé", value: "accompagnement" }
+          - { label: "📐 Co-enseignement Mathématiques", value: "maths" }
+          - { label: "⚡ Co-enseignement Physique", value: "physique" }
+          - { label: "💾 Programmation", value: "programmation" }
+
+      - label: "Type de contenu"
+        name: "type"
+        widget: "select"
+        options:
+          - { label: "Cours", value: "cours" }
+          - { label: "TP (Travaux Pratiques)", value: "tp" }
+          - { label: "TD (Travaux Dirigés)", value: "td" }
+
+      - label: "Titre"
+        name: "titre"
+        widget: "string"
+        hint: "Le titre principal du cours ou TP"
+
+      - label: "Sous-titre"
+        name: "soustitre"
+        widget: "string"
+        required: false
+        hint: "Un sous-titre ou thème (optionnel)"
+
+      - label: "Date de publication"
+        name: "date"
+        widget: "datetime"
+        format: "MMMM YYYY"
+        date_format: "MMMM YYYY"
+        time_format: false
+        hint: "Mois et année d'ajout du cours"
+
+      - label: "Description"
+        name: "description"
+        widget: "text"
+        hint: "Une courte description du contenu (2-3 lignes)"
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        hint: "Mots-clés pour identifier le contenu (appuyez sur Entrée après chaque tag)"
+        required: false
+
+      - label: "Lien vers le cours"
+        name: "lien"
+        widget: "string"
+        hint: "Lien vers le fichier HTML du cours (ex: cours-reseaux-janvier.html)"
+
+      - label: "Publié"
+        name: "publie"
+        widget: "boolean"
+        default: true
+        hint: "Décochez pour masquer ce cours"

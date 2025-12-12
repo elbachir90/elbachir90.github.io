@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialiser toutes les animations
     initAnimations();
+
+    // Créer le système de particules
+    createParticles();
 });
 
 // Fonction pour basculer entre mode clair et sombre
@@ -288,3 +291,190 @@ function showWelcomeMessage() {
 }
 
 showWelcomeMessage();
+
+// ==================== SYSTÈME DE PARTICULES ====================
+
+function createParticles() {
+    const particlesContainer = document.getElementById('particles-background');
+    const particleCount = 50; // Nombre de particules
+
+    for (let i = 0; i < particleCount; i++) {
+        createParticle(particlesContainer);
+    }
+}
+
+function createParticle(container) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    // Position aléatoire
+    const startX = Math.random() * 100;
+    const startY = Math.random() * 100;
+
+    // Taille aléatoire
+    const size = Math.random() * 4 + 2;
+
+    // Durée d'animation aléatoire
+    const duration = Math.random() * 20 + 15;
+
+    // Délai aléatoire
+    const delay = Math.random() * 5;
+
+    particle.style.cssText = `
+        position: absolute;
+        left: ${startX}%;
+        top: ${startY}%;
+        width: ${size}px;
+        height: ${size}px;
+        background: radial-gradient(circle, rgba(52, 152, 219, 0.8) 0%, rgba(52, 152, 219, 0) 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: float ${duration}s ease-in-out ${delay}s infinite;
+        opacity: 0.6;
+    `;
+
+    container.appendChild(particle);
+}
+
+// Ajouter l'animation CSS pour les particules via JavaScript
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+    @keyframes float {
+        0%, 100% {
+            transform: translate(0, 0) scale(1);
+            opacity: 0;
+        }
+        10% {
+            opacity: 0.6;
+        }
+        90% {
+            opacity: 0.6;
+        }
+        50% {
+            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(1.5);
+            opacity: 1;
+        }
+    }
+
+    [data-theme="dark"] .particle {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%) !important;
+    }
+`;
+document.head.appendChild(styleSheet);
+
+// ==================== ANIMATIONS 3D AVANCÉES POUR LES CARTES ====================
+
+// Ajouter effet de flip au clic sur les cartes
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.course-card');
+
+    cards.forEach(card => {
+        // Effet 3D au mouvement de la souris
+        card.addEventListener('mousemove', function(e) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+        });
+
+        card.addEventListener('mouseleave', function() {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+        });
+
+        // Effet de flip au double-clic
+        card.addEventListener('dblclick', function() {
+            card.classList.add('flip');
+            setTimeout(() => {
+                card.classList.remove('flip');
+            }, 600);
+        });
+    });
+});
+
+// Ajouter animation de float aléatoire à certaines cartes
+window.addEventListener('load', function() {
+    const cards = document.querySelectorAll('.course-card');
+    cards.forEach((card, index) => {
+        if (index % 2 === 0) {
+            setTimeout(() => {
+                card.classList.add('float');
+            }, index * 200);
+        }
+    });
+});
+
+// ==================== ANIMATIONS DE TITRE SPECTACULAIRES ====================
+
+// Animation de glitch pour le titre principal
+function addGlitchEffect() {
+    const heroTitle = document.querySelector('.hero h2');
+    if (heroTitle) {
+        heroTitle.addEventListener('mouseenter', function() {
+            this.classList.add('glitch');
+            setTimeout(() => {
+                this.classList.remove('glitch');
+            }, 500);
+        });
+    }
+}
+
+window.addEventListener('load', addGlitchEffect);
+
+// Effet de particules au clic
+document.addEventListener('click', function(e) {
+    createClickParticles(e.clientX, e.clientY);
+});
+
+function createClickParticles(x, y) {
+    const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
+
+    for (let i = 0; i < 6; i++) {
+        const particle = document.createElement('div');
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const angle = (Math.PI * 2 * i) / 6;
+        const velocity = 2;
+
+        particle.style.cssText = `
+            position: fixed;
+            left: ${x}px;
+            top: ${y}px;
+            width: 8px;
+            height: 8px;
+            background: ${color};
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+        `;
+
+        document.body.appendChild(particle);
+
+        let posX = x;
+        let posY = y;
+        let opacity = 1;
+
+        const animate = () => {
+            posX += Math.cos(angle) * velocity * 3;
+            posY += Math.sin(angle) * velocity * 3;
+            opacity -= 0.02;
+
+            particle.style.left = posX + 'px';
+            particle.style.top = posY + 'px';
+            particle.style.opacity = opacity;
+
+            if (opacity > 0) {
+                requestAnimationFrame(animate);
+            } else {
+                particle.remove();
+            }
+        };
+
+        animate();
+    }
+}
