@@ -1,14 +1,322 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<title>BTS CIEL JBS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plateforme de cours pour BTS CIEL - Jean-Baptiste de La Salle">
+    <title>BTS CIEL - Plateforme de Cours</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  
-    <img src="lasalle.png" />
-    <h1>Plateforme de cours pour BTS CIEL</h1>
-    <a href="page1.html"> lien vers le cours</a>
+    <!-- Header avec navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="lasalle.png" alt="Logo La Salle" />
+                <h1>BTS CIEL - JBS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#reseaux">Réseaux</a></li>
+                    <li><a href="#accompagnement">Accompagnement</a></li>
+                    <li><a href="#maths">Maths</a></li>
+                    <li><a href="#physique">Physique</a></li>
+                    <li><a href="#programmation">Programmation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h2>Bienvenue sur la Plateforme de Cours BTS CIEL</h2>
+            <p>Accédez à tous vos cours, ressources et supports pédagogiques en un seul endroit</p>
+            <a href="#cours" class="cta-button">Découvrir les cours</a>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <div class="container">
+
+        <!-- ==================== RÉSEAUX ==================== -->
+        <section id="reseaux" class="subject-section subject-reseaux">
+            <div class="subject-header">
+                <h3>🌐 Réseaux</h3>
+                <span class="subject-icon">💻</span>
+            </div>
+
+            <div class="courses-grid">
+                <!-- EXEMPLE : Cours de Réseaux - Décembre 2024 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="date-badge">Décembre 2024</span>
+                        <span class="course-type type-cours">Cours</span>
+                        <h3>Introduction aux Réseaux TCP/IP</h3>
+                        <p class="course-meta">Fondamentaux</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Découverte des bases des réseaux informatiques, modèle OSI et protocoles TCP/IP.</p>
+                        <div class="course-tags">
+                            <span class="tag">TCP/IP</span>
+                            <span class="tag">OSI</span>
+                            <span class="tag">Protocoles</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#" class="course-link">Accéder au cours</a>
+                    </div>
+                </div>
+
+                <!-- TEMPLATE - Dupliquez cette carte pour ajouter un nouveau cours/TP -->
+                <!--
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="date-badge">Janvier 2025</span>
+                        <span class="course-type type-tp">TP</span>
+                        <h3>Titre du TP</h3>
+                        <p class="course-meta">Thème</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Description du TP...</p>
+                        <div class="course-tags">
+                            <span class="tag">Tag1</span>
+                            <span class="tag">Tag2</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="votre-fichier.html" class="course-link">Accéder au TP</a>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- ==================== ACCOMPAGNEMENT PERSONNALISÉ ==================== -->
+        <section id="accompagnement" class="subject-section subject-accompagnement">
+            <div class="subject-header">
+                <h3>👥 Accompagnement Personnalisé</h3>
+                <span class="subject-icon">📖</span>
+            </div>
+
+            <div class="courses-grid">
+                <!-- TEMPLATE - Ajoutez vos cours d'accompagnement ici -->
+                <!--
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="date-badge">Mois Année</span>
+                        <span class="course-type type-cours">Cours</span>
+                        <h3>Titre</h3>
+                        <p class="course-meta">Thème</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Description...</p>
+                        <div class="course-tags">
+                            <span class="tag">Tag</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#" class="course-link">Accéder</a>
+                    </div>
+                </div>
+                -->
+
+                <p style="text-align: center; color: #7f8c8d; padding: 2rem;">
+                    Les cours seront ajoutés progressivement.
+                </p>
+            </div>
+        </section>
+
+        <!-- ==================== CO-ENSEIGNEMENT MATHÉMATIQUES ==================== -->
+        <section id="maths" class="subject-section subject-maths">
+            <div class="subject-header">
+                <h3>📐 Co-enseignement Mathématiques</h3>
+                <span class="subject-icon">∑</span>
+            </div>
+
+            <div class="courses-grid">
+                <!-- EXEMPLE : Cours de Maths -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="date-badge">Décembre 2024</span>
+                        <span class="course-type type-cours">Cours</span>
+                        <h3>Algèbre Linéaire</h3>
+                        <p class="course-meta">Matrices et Vecteurs</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Introduction aux matrices, opérations vectorielles et applications en électronique.</p>
+                        <div class="course-tags">
+                            <span class="tag">Matrices</span>
+                            <span class="tag">Vecteurs</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#" class="course-link">Accéder au cours</a>
+                    </div>
+                </div>
+
+                <!-- TEMPLATE pour nouveaux cours -->
+            </div>
+        </section>
+
+        <!-- ==================== CO-ENSEIGNEMENT PHYSIQUE ==================== -->
+        <section id="physique" class="subject-section subject-physique">
+            <div class="subject-header">
+                <h3>⚡ Co-enseignement Physique</h3>
+                <span class="subject-icon">🔬</span>
+            </div>
+
+            <div class="courses-grid">
+                <!-- EXEMPLE : TP de Physique -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="date-badge">Décembre 2024</span>
+                        <span class="course-type type-tp">TP</span>
+                        <h3>Lois de l'Électricité</h3>
+                        <p class="course-meta">Loi d'Ohm, Kirchhoff</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Travaux pratiques sur les lois fondamentales de l'électricité appliquées aux circuits.</p>
+                        <div class="course-tags">
+                            <span class="tag">Ohm</span>
+                            <span class="tag">Kirchhoff</span>
+                            <span class="tag">Circuits</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#" class="course-link">Accéder au TP</a>
+                    </div>
+                </div>
+
+                <!-- TEMPLATE pour nouveaux cours -->
+            </div>
+        </section>
+
+        <!-- ==================== PROGRAMMATION ==================== -->
+        <section id="programmation" class="subject-section subject-programmation">
+            <div class="subject-header">
+                <h3>💾 Programmation</h3>
+                <span class="subject-icon">{ }</span>
+            </div>
+
+            <div class="courses-grid">
+                <!-- EXEMPLE : Cours existant -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="date-badge">Cours actuel</span>
+                        <span class="course-type type-cours">Cours</span>
+                        <h3>Électronique et Systèmes</h3>
+                        <p class="course-meta">Cours complet</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Découvrez les fondamentaux de l'électronique et des systèmes embarqués.</p>
+                        <div class="course-tags">
+                            <span class="tag">Électronique</span>
+                            <span class="tag">Systèmes</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="page1.html" class="course-link">Accéder au cours</a>
+                    </div>
+                </div>
+
+                <!-- EXEMPLE : TP de Programmation Python -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <span class="date-badge">Décembre 2024</span>
+                        <span class="course-type type-tp">TP</span>
+                        <h3>Introduction à Python</h3>
+                        <p class="course-meta">Bases du langage</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Premiers pas en Python : variables, boucles, conditions et fonctions.</p>
+                        <div class="course-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Débutant</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#" class="course-link">Accéder au TP</a>
+                    </div>
+                </div>
+
+                <!-- TEMPLATE pour nouveaux cours -->
+            </div>
+        </section>
+
+        <!-- ==================== GUIDE D'UTILISATION ==================== -->
+        <section id="guide">
+            <div class="template-guide">
+                <h4>📝 Guide pour ajouter un nouveau cours ou TP</h4>
+                <p><strong>Instructions :</strong></p>
+                <ol style="margin-left: 1.5rem; color: #555;">
+                    <li>Trouvez la section de matière appropriée ci-dessus</li>
+                    <li>Copiez le bloc de code commenté (TEMPLATE)</li>
+                    <li>Décommentez le code (enlevez les balises &lt;!-- et --&gt;)</li>
+                    <li>Modifiez :
+                        <ul style="margin-left: 1rem; margin-top: 0.5rem;">
+                            <li><code>date-badge</code> : mois et année</li>
+                            <li><code>course-type</code> : type-cours, type-tp ou type-td</li>
+                            <li><code>h3</code> : titre du cours/TP</li>
+                            <li><code>course-meta</code> : sous-titre</li>
+                            <li><code>p</code> : description</li>
+                            <li><code>tag</code> : mots-clés pertinents</li>
+                            <li><code>href</code> : lien vers votre fichier HTML</li>
+                        </ul>
+                    </li>
+                    <li>Sauvegardez le fichier et rechargez la page</li>
+                </ol>
+                <p style="margin-top: 1rem;"><strong>Types disponibles :</strong>
+                    <span class="course-type type-cours">COURS</span>
+                    <span class="course-type type-tp">TP</span>
+                    <span class="course-type type-td">TD</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Section Ressources -->
+        <section id="ressources">
+            <h2 class="section-title">Ressources Complémentaires</h2>
+
+            <div class="info-section">
+                <h3>📚 Documents et Supports</h3>
+                <ul>
+                    <li>Cours magistraux et présentations</li>
+                    <li>Travaux pratiques et exercices</li>
+                    <li>Projets et études de cas</li>
+                    <li>Documentation technique</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3>ℹ️ Informations Importantes</h3>
+                <ul>
+                    <li>Les cours sont mis à jour mensuellement</li>
+                    <li>Consultez cette plateforme régulièrement pour les dernières ressources</li>
+                    <li>Chaque matière a sa propre section avec une couleur distinctive</li>
+                    <li>N'hésitez pas à contacter votre enseignant pour toute question</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>BTS CIEL - Cybersécurité, Informatique et Réseaux, Électronique</strong></p>
+            <p>Jean-Baptiste de La Salle</p>
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#reseaux">Réseaux</a>
+                <a href="#accompagnement">Accompagnement</a>
+                <a href="#maths">Maths</a>
+                <a href="#physique">Physique</a>
+                <a href="#programmation">Programmation</a>
+            </div>
+            <p style="margin-top: 1rem; opacity: 0.7;">&copy; 2024 BTS CIEL JBS - Tous droits réservés</p>
+        </div>
+    </footer>
 </body>
-  
 </html>
