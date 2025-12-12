@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <!-- Bouton de basculement mode sombre/clair -->
-    <button id="theme-toggle" onclick="toggleTheme()" aria-label="Basculer le thème">🌙</button>
+    <!-- Conteneur pour les particules de fond -->
+    <div id="particles-background"></div>
+
     <!-- Header avec navigation -->
     <header>
         <div class="header-container">
@@ -28,6 +29,10 @@
                     <li><a href="#programmation">Programmation</a></li>
                 </ul>
             </nav>
+            <!-- Bouton mode sombre/clair dans le header -->
+            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Basculer le thème" title="Changer le thème">
+                🌙
+            </button>
         </div>
     </header>
 
