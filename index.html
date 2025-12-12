@@ -1,14 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<title>BTS CIEL JBS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plateforme de cours pour BTS CIEL - Jean-Baptiste de La Salle">
+    <title>BTS CIEL - Plateforme de Cours</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  
-    <img src="lasalle.png" />
-    <h1>Plateforme de cours pour BTS CIEL</h1>
-    <a href="page1.html"> lien vers le cours</a>
+    <!-- Header avec navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="lasalle.png" alt="Logo La Salle" />
+                <h1>BTS CIEL - JBS</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#cours">Cours</a></li>
+                    <li><a href="#ressources">Ressources</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section Hero -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h2>Bienvenue sur la Plateforme de Cours BTS CIEL</h2>
+            <p>Accédez à tous vos cours, ressources et supports pédagogiques en un seul endroit</p>
+            <a href="#cours" class="cta-button">Découvrir les cours</a>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- Section Cours -->
+        <section id="cours">
+            <h2 class="section-title">Cours Disponibles</h2>
+
+            <div class="courses-grid">
+                <!-- Carte de cours 1 -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>Électronique et Systèmes</h3>
+                        <p class="course-meta">Semestre 1-2</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Découvrez les fondamentaux de l'électronique et des systèmes embarqués.</p>
+                        <div class="course-tags">
+                            <span class="tag">Électronique</span>
+                            <span class="tag">Systèmes</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="page1.html" class="course-link">Accéder au cours</a>
+                    </div>
+                </div>
+
+                <!-- Carte de cours 2 - Template pour futurs cours -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>Informatique et Réseaux</h3>
+                        <p class="course-meta">Semestre 1-2</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Maîtrisez les concepts de l'informatique industrielle et des réseaux.</p>
+                        <div class="course-tags">
+                            <span class="tag">Informatique</span>
+                            <span class="tag">Réseaux</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#" class="course-link">À venir</a>
+                    </div>
+                </div>
+
+                <!-- Carte de cours 3 - Template -->
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3>Programmation</h3>
+                        <p class="course-meta">Semestre 1-2</p>
+                    </div>
+                    <div class="course-body">
+                        <p>Apprenez la programmation pour les systèmes embarqués et industriels.</p>
+                        <div class="course-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">C/C++</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#" class="course-link">À venir</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Ressources -->
+        <section id="ressources">
+            <h2 class="section-title">Ressources Complémentaires</h2>
+
+            <div class="info-section">
+                <h3>📚 Documents et Supports</h3>
+                <ul>
+                    <li>Cours magistraux et présentations</li>
+                    <li>Travaux pratiques et exercices</li>
+                    <li>Projets et études de cas</li>
+                    <li>Documentation technique</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h3>ℹ️ Informations Importantes</h3>
+                <ul>
+                    <li>Les cours sont mis à jour régulièrement</li>
+                    <li>Consultez cette plateforme pour les dernières ressources</li>
+                    <li>N'hésitez pas à contacter votre enseignant pour toute question</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>BTS CIEL - Cybersécurité, Informatique et Réseaux, Électronique</strong></p>
+            <p>Jean-Baptiste de La Salle</p>
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#cours">Cours</a>
+                <a href="#ressources">Ressources</a>
+            </div>
+            <p style="margin-top: 1rem; opacity: 0.7;">&copy; 2024 BTS CIEL JBS - Tous droits réservés</p>
+        </div>
+    </footer>
 </body>
-  
 </html>
